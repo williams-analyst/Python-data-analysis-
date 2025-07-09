@@ -1,0 +1,20 @@
+import pandas as pd
+
+# Read the sales data
+df = pd.read_csv('sales_data.csv')  # If you used a different file name, update it here
+
+# Add a new column for total sale per row
+df['Total'] = df['Quantity'] * df['Price']
+
+# Print the data with total
+print("Sales Data with Total:")
+print(df)
+
+# Total sales overall
+total_sales = df['Total'].sum()
+print("\nTotal Sales:", total_sales)
+
+# Group by product to see which sold most
+product_sales = df.groupby('Product')['Total'].sum().sort_values(ascending=False)
+print("\nSales by Product:")
+print(product_sales)
