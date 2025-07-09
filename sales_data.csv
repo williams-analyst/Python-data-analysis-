@@ -1,1 +1,8 @@
-
+Product,Quantity,Price
+Apples,10,1.2
+Bananas,5,0.5
+Oranges,8,0.8
+Apples,4,1.2
+Bananas,6,0.5
+Oranges,3,0.8
+Added sales data csv for analysis project 
